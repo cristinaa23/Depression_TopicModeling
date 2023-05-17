@@ -9,9 +9,9 @@ Depression is one of the most prominent problems in younger generations and one 
 ## Corpora
 
 For this project we have used the English depression related posts from Reddit corpus. This data is available in [Kaggle](https://www.kaggle.com/datasets/luizfmatos/reddit-english-depression-related-submissions?resource=download).
-The dataset is in JSON format but in the code it is transformed to CSV. 
+The dataset is in JSON format but, in the code, it is transformed to CSV. 
 
-This CSV has a total of 32165 row (one post per row) and 24 columns (e.g. user, date, edition, etc.). Of these 24 columns, we kept the three we were interested in for topic modeling ('body', 'subreddit_name' and 'title'). 
+This CSV has a total of 32165 rows (one post per row) and 24 columns (e.g. user, date, edition, etc.). Of these 24 columns, we kept the three we were interested in for topic modeling ('body', 'subreddit_name' and 'title'). 
 Another interesting fact is that the average number of words per text is 235'39.
 
 ## Methodology
