@@ -1,6 +1,6 @@
 # Depretect: depression detection with a LDA model
 
-In the github we collect the materials used for our Final Project of the course Applications for NLP II.
+In this github we collect the materials used for our Final Project of the course Applications for NLP II.
 
 ## Introduction 
 
@@ -17,7 +17,7 @@ Another interesting fact is that the average number of words per text is 235'39.
 ## Methodology
 
 In this code, we has created a code for topic modeling. For doing this, we have preprocessed the texts with the spacy package "en_core_web_sm" in order to tokenise them, extract POS tags, etc. Stopwords and other characters have been removed and only open-class words have been kept. 
-Finally, in this preprocessing, the 100 most frequent collocations have been extracted and all the preprocessing has been saved in a new column. Subsequently, it has been vectorised and an LDA model has been created which is able to differentiate 100 topics in the texts. 
+Finally, in this preprocessing, the 100 most frequent collocations have been extracted and all the preprocessing has been saved in a new column. Subsequently, it has been vectorised and an LDA model has been created, which is able to differentiate 100 topics in the texts. 
 
 ## Results 
 
@@ -26,5 +26,3 @@ The code results in graphs showing the most frequent words by topic, word simila
 ## Future Work
 
 We encourage researchers to reuse our code in order to improve its performance. In addition, other datasets from different social networks can also be applied. Finally, it is worth mentioning the great usefulness of this type of models for the early detection of mental disorders through language processing. 
-
-## References
