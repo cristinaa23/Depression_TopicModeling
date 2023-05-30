@@ -4,7 +4,7 @@ In this github we collect the materials used for our Final Project of the course
 
 ## Introduction 
 
-Depression is one of the most prominent problems in younger generations and one of the most difficult to detect in time. Therefore, in this GitHub we train a model capable of detecting texts with depression as a theme in posts on the social network Reddit using the Latent Dirichlet Allocation (LDA) method.
+Depression is one of the most prominent problems in younger generations and one of the most difficult to detect in time. Therefore, in this GitHub we train a model capable of detecting emerging topics from Reddit posts with depression as main theme using the Latent Dirichlet Allocation (LDA) method.
 
 ## Corpora
 
@@ -17,12 +17,20 @@ Another interesting fact is that the average number of words per text is 235'39.
 ## Methodology
 
 In this code, we has created a code for topic modeling. For doing this, we have preprocessed the texts with the spacy package "en_core_web_sm" in order to tokenise them, extract POS tags, etc. Stopwords and other characters have been removed and only open-class words have been kept. 
-Finally, in this preprocessing, the 100 most frequent collocations have been extracted and all the preprocessing has been saved in a new column. Subsequently, it has been vectorised and an LDA model has been created, which is able to differentiate 100 topics in the texts. 
+Finally, in this preprocessing part, the 100 most frequent collocations have been extracted to join each collocation with an underscore and all the preprocessing has been saved in a new column ("preproc"). With this, we can see that the average number of words per text has changed to 75'30. Subsequently, it has been vectorised and an LDA model has been created, which is able to differentiate 50 topics in the texts. 
 
 ## Results 
 
-The code results in graphs showing the most frequent words by topic, word similarity and document similarity. Lastly, the performance of this model has a Log Likelihood of -15679211.22011435 and a perplexity of 1491.4019398256091.
+The model shows different formats of the results. On the one hand, it shows a table with the 50 topics and their respective words with the most weight. For example, topic 0 contains words such as "friend", "people", "talk", "care"...; that is, the topic is related to social relations. Topic 1 has words like "help", "therapist", "talk", "problem"... which could be grouped as clinical help. Topic 2 contains words such as "love", "pain", "mind", "heart"... which are words related to the topic of love break-up. 
 
-## Future Work
+On the other hand, we find the results in a bi-dimensional space that groups the 50 themes by similarity. Their distribution could be differentiated as follows: 
+- Upper-left side: with descriptive words of the topic of bad situations ("fuck", "tired", "fucking", "hate", "shit"...).
+- Upper-right side: social relations topic ("friend", "girl", "mom", "love", "dad"...)
+- Lower-left side: sentiments topic ("depression", "help", "hate", "sad"...)
+- Lower-right side: routine topic ("job", "school", "work", "class"...)
 
-We encourage researchers to reuse our code in order to improve its performance. In addition, other datasets from different social networks can also be applied. Finally, it is worth mentioning the great usefulness of this type of models for the early detection of mental disorders through language processing. 
+Other types of results show words and texts by similarity taking a specific word/text as reference. Lastly, the performance of this model has a Log Likelihood of -15679211.22011435 and a Perplexity of 1491.4019398256091.
+
+## Conclusions and Future Work
+
+This model is able to differentiate different topics that are actually problems leading to depression. It can be usefull to detect this kind of sub-problems in texts. Finally, we encourage researchers to improve this model inproving the preprocessing part making it more selective so it deletes words such as "thing" or "see" in order to obtain more specific topics. 
